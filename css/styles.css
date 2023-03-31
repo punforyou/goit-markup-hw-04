@@ -109,8 +109,12 @@ img {
     color: var(--main-text-color);
 }
 
-.hero{
-    background: #2E2F42;
+.hero {
+    background-color: #2E2F42;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/hero.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     max-height: 600px;
     margin: 0 auto;
     padding: 188px 0;
@@ -143,6 +147,7 @@ button {
     color: #FFF;
     background: #4D5AE5;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: none;
     padding: 16px 32px;
     display: flex;
     margin: 0 auto;
@@ -200,6 +205,16 @@ button {
     flex-basis: calc((100% - 3 * 24px) / 4);
 }
 
+.qualities-box-icon {
+    width: 264px;
+    height: 112px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .item {
     margin-right: 24px; 
 }
@@ -228,8 +243,62 @@ button {
     text-align: center;
 }
 
+.team-text {
+    margin-bottom: 8px;
+}
+
+.soc-item {
+    width: 40px;
+    height: 40px;
+}
+
+.soc-link {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#4D5AE5;
+}
+
+.soc-link:is(:active, :hover, :focus) {
+    cursor: pointer;
+    background: #404BBF;
+}
+
+.soc-icon {
+    fill: #F4F4FD;
+}
+
 .panel {
     padding: 32px 16px;   
+}
+
+.customers {
+    padding: 130px 0 120px 0;
+}
+
+.customers-item {
+    width: 168px;
+    height: 88px;
+    border: 1px solid #8E8F99;
+    border-radius: 4px;
+}
+
+.customers-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    fill: #8E8F99;
+}
+
+.customers-link:is(:active, :hover, :focus) {
+    cursor: pointer;
+    border: 1px solid #404BBF;
+    fill: #404BBF;;
 }
 
 .filter {
@@ -260,13 +329,26 @@ button {
     margin-bottom: 0;
 }
 
+.job-card:is(:active, :hover, :focus) {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
 .footer {
     background: #2E2F42;
-    padding: 100px;
+    padding: 100px 0;
 }
 
 .studio-footer {
     color: #F4F4FD;
+}
+
+.footer-container {
+    display: flex;
+}
+
+.container-footer-logo {
+    margin: 0;
+    padding: 0;
 }
 
 .footer-text {
@@ -274,4 +356,33 @@ button {
     line-height: 1.5;
     max-width: 264px;
     margin-top: 16px;
+}
+
+.footer-soc {
+    max-width: 208px;
+    margin-left: 120px;
+    padding: 0;
+}
+
+.soc-title {
+    font-weight: 500;
+    color: #FFF;
+    margin-bottom: 16px;
+}
+
+.footer-soc-item {
+  margin-right: 16px;  
+}
+
+.footer-soc-item:last-of-type {
+    margin-right: 0;
+}
+
+.footer-soc-link {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.footer-soc-link:is(:active, :hover, :focus) {
+    cursor: pointer;
+    background: #31D0AA;
 }
